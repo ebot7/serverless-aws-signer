@@ -1,0 +1,40 @@
+service: serverless-signee-lamda
+
+plugins:
+  - serverless-aws-signer
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-west-2
+  apiGateway:
+    shouldStartNameWithService: true
+
+custom:
+  signer:
+    retain: true
+    source:
+      s3:
+        bucketName: source-bucket-for-signer
+    profileName: signing-profile
+    signingPolicy: Enforce
+    
+package:
+  individually: true
+
+functions:
+  signee:
+    handler: index.lambda_handler
+    signer:
+      profileName: signing-profile
+      signingPolicy: Enforce
+    events:
+      - http:
+          path: test
+          method: get
+  signee2:
+    handler: index.lambda_handler
+    events:
+      - http:
+          path: test
+          method: post

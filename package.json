@@ -1,0 +1,35 @@
+{
+  "name": "serverless-aws-signer-ebot7",
+  "version": "0.2.2",
+  "description": "Signs Lambda functions with AWS Signer service - E-bot7 fork",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo placeholder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebot7/serverless-aws-signer.git"
+  },
+  "keywords": [
+    "serverless",
+    "plugins",
+    "lambda",
+    "aws",
+    "signer",
+    "serverless.com",
+    "serverless.yaml"
+  ],
+  "author": {
+    "name": "Bahram Bahrambeigy",
+    "email": "bahram.bahrambeigy@e-bot7.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ebot7/serverless-aws-signer/issues"
+  },
+  "homepage": "https://github.com/ebot7/serverless-aws-signer/blob/main/README.md",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "user": "^0.0.0"
+  }
+}
